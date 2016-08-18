@@ -1,0 +1,439 @@
+/****************
+CSS Reset
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+****************/
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1.4;
+/*  font-family: Arial, Helvetica, sans-serif;*/
+  position: relative;
+  margin: 0;
+/*
+  padding-bottom: 6rem;
+  min-height: 100%;
+*/
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+:focus {
+  outline: none;
+}
+strong {
+  font-weight: bold; 
+}
+
+
+/* clear fix */
+
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+img,
+iframe,
+video,
+object {
+    max-width: 100%;
+}
+
+
+/***************
+Global
+***************/
+
+
+
+.wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden;
+    
+}
+.container {
+    max-width: 1440px;
+    position: relative;
+    z-index: 2;
+    min-height: 100%;
+/*    padding-bottom: 32px;*/
+}
+
+body {
+/* Gotham HFT Condensed font family not included 
+in the zip file, PT Sans Narrow is a free, popular 
+alternative of narrow/condensed I can find. */
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    background: #f1f1f1;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #f1f1f1 67%, #f1f1f1 67%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f1f1f1 67%, #f1f1f1 67%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f1f1f1 67%, #f1f1f1 67%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#ffffff', GradientType=0);
+    /* IE6-9 */
+}
+
+a {
+    text-decoration: none;
+    color: #eb2428;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 80px;
+    color: #0072ae;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 35px;
+    margin: 10px 0 5px;
+    color: #eb2428;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+
+
+/***************
+Modular Styles
+***************/
+.float-left {
+  float: left; 
+}
+.float-right {
+  float: right; 
+}
+.clear {
+  clear: both; 
+}
+.bold {
+  font-weight: bold; 
+}
+.hidden,
+.hide {
+  display: none; 
+}
+.relative {
+  position: relative; 
+}
+.absolute {
+  position: absolute; 
+}
+.block {
+  display: block; 
+}
+.inline-block {
+  display: inline-block; 
+}
+.text-centered {
+  text-align: center; 
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.red-text {
+    color: #ee2f25;
+}
+
+
+
+
+/***************
+Nav
+***************/
+
+.top-nav {
+    float: right;
+}
+
+.top-nav > li {
+    float: left;
+}
+
+.top-nav > li > a {
+    float: left;
+    padding: 25px;
+}
+
+nav li a {
+    font-size: 1.9em;
+    color: #fff;
+}
+
+/* These treatments aren't displayed in or included in the comp or Readme */
+nav li a:focus,
+nav li a:hover,
+nav li a.active {
+    background-color: ;
+    color: ;
+}
+
+.menu-icon {
+    background: url("../img/iconbar-menu.png") 0 0 no-repeat;
+    width: 34px;
+    height: 56px;
+    float: right;
+    margin:10px 15px 0 0;
+    cursor: pointer;
+}
+
+.menu-icon.open {
+    background-image: url("../img/close-menu.png");
+    width: 50px;
+    height: 51px;
+    margin-bottom:5px;
+}
+
+nav {
+/*    padding: 30px 0;*/
+    background: rgb(0, 102, 153);/* Old browsers */
+    background: -moz-linear-gradient(left, rgba(0, 102, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(0, 102, 153, 1) 100%, rgba(125, 185, 232, 1) 100%, rgba(32, 124, 202, 1) 100%);/* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 102, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(0, 102, 153, 1) 100%, rgba(125, 185, 232, 1) 100%, rgba(32, 124, 202, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0, 102, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(0, 102, 153, 1) 100%, rgba(125, 185, 232, 1) 100%, rgba(32, 124, 202, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+
+/* The Logo was not included in the zip file */
+figure.logo {
+    height: 62px;
+    width: 270px;
+    float: left;
+    padding-left: 50px;
+}
+
+
+
+
+/***************
+Hero Content
+***************/
+
+.hero-imagery-content {
+    width: 66.7%;
+    float: left;
+    height:100%;
+}
+
+.hero-media-content {
+    width: 33.3%;
+    float: left;
+}
+
+.hero-media-content img {
+    display: block;
+    width: 100%;
+}
+
+.hero-media-caption {
+    background-color: #00a3e3;
+    height: 43px;
+}
+
+.hero-media-caption p {
+    color:#fff;
+    font-size:1.6em;
+    text-align: center;
+
+}
+
+
+
+
+/***************
+Details Content
+***************/
+
+.details-section {
+    margin-bottom: 50px;
+}
+
+.details-section h2,
+.details-section p {
+    color: #5e5e5e;
+}
+
+.details-section p {
+    font-size: 1.2rem;
+}
+
+
+
+
+/***************
+Media queries
+***************/
+@media screen and (max-width: 900px) {
+    .hero-imagery-content {
+        float: none;
+        width:auto;
+    }
+    .hero-media-content {
+        float:none;
+        width:auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    nav {
+        position:static;
+    }
+    
+    .top-nav.active {
+        max-height: 350px;
+    }
+    
+    
+
+    .top-nav { 
+        width:100%;
+        max-height: 0;
+        overflow:hidden;
+        -moz-transition: all ease-in-out .40s;
+        -webkit-transition: all ease-in-out .40s;
+        -o-transition: all ease-in-out .40s;
+        transition: all ease-in-out .40s;
+        
+    }
+    
+    .top-nav > li {
+        float: right;
+        width:100%;
+    }
+    
+    .top-nav li a {
+        text-align: center;
+        padding: 15px 25px 15px 0;
+        width:100%;
+        font-size 13px;        
+    }
+}
+
+@media screen and (min-width: 767px){
+    div.menu-icon {
+        max-height:0;
+    }
+    
+
+}
+
+    
+
+}/*  end media queries */
+
+
+
+
+
+/***************
+Footer
+***************/
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #f1f1f1 67%, #f1f1f1 67%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f1f1f1 67%, #f1f1f1 67%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f1f1f1 67%, #f1f1f1 67%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#ffffff', GradientType=0);
+    /* IE6-9 */
+ 
+}
+
+.footer-navlinks {
+    overflow:hidden;
+}
+
+.footer-nav {
+    float: left;
+}
+
+.footer-nav > li {
+    float: left;
+}
+
+.footer-nav > li > a {
+    float: left;
+    padding-left: 25px;
+}
+
+footer li a {    
+    color: #5e5e5e;
+}
+
+.copyright{
+    float:right;
+
+}
